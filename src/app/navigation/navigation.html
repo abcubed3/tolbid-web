@@ -1,0 +1,20 @@
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-white dark:bg-midnight border-t border-gray-200 dark:border-gray-800 pb-safe">
+  <div class="flex justify-around items-center h-16 max-w-md mx-auto">
+    <a routerLink="/home" routerLinkActive="text-primary" [routerLinkActiveOptions]="{exact: true}" class="flex flex-col items-center justify-center w-full h-full space-y-1 text-slate-500 dark:text-slate-400 hover:text-midnight dark:hover:text-white transition-colors">
+      <span class="material-symbols-outlined">home</span>
+      <span class="text-[10px] font-medium">Home</span>
+    </a>
+    <a routerLink="/services" routerLinkActive="text-primary" class="flex flex-col items-center justify-center w-full h-full space-y-1 text-slate-500 dark:text-slate-400 hover:text-midnight dark:hover:text-white transition-colors">
+      <span class="material-symbols-outlined">grid_view</span>
+      <span class="text-[10px] font-medium">Services</span>
+    </a>
+    <a routerLink="/about" routerLinkActive="text-primary" class="flex flex-col items-center justify-center w-full h-full space-y-1 text-slate-500 dark:text-slate-400 hover:text-midnight dark:hover:text-white transition-colors">
+      <span class="material-symbols-outlined">info</span>
+      <span class="text-[10px] font-medium">About</span>
+    </a>
+    <a routerLink="/contact" routerLinkActive="text-primary" class="flex flex-col items-center justify-center w-full h-full space-y-1 text-slate-500 dark:text-slate-400 hover:text-midnight dark:hover:text-white transition-colors">
+      <span class="material-symbols-outlined">mail</span>
+      <span class="text-[10px] font-medium">Contact</span>
+    </a>
+  </div>
+</nav>
