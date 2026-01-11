@@ -1,1 +1,12 @@
-@use 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-[#f6f7f8] text-[#0F1C2E];
+  @apply transition-colors duration-500;
+}
+
+.dark body {
+  @apply bg-[#0B1422] text-[#f6f7f8];
+}

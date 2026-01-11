@@ -1,20 +1,32 @@
-<nav class="fixed bottom-0 left-0 right-0 z-50 bg-white dark:bg-midnight border-t border-gray-200 dark:border-gray-800 pb-safe">
-  <div class="flex justify-around items-center h-16 max-w-md mx-auto">
-    <a routerLink="/home" routerLinkActive="text-primary" [routerLinkActiveOptions]="{exact: true}" class="flex flex-col items-center justify-center w-full h-full space-y-1 text-slate-500 dark:text-slate-400 hover:text-midnight dark:hover:text-white transition-colors">
-      <span class="material-symbols-outlined">home</span>
-      <span class="text-[10px] font-medium">Home</span>
-    </a>
-    <a routerLink="/services" routerLinkActive="text-primary" class="flex flex-col items-center justify-center w-full h-full space-y-1 text-slate-500 dark:text-slate-400 hover:text-midnight dark:hover:text-white transition-colors">
-      <span class="material-symbols-outlined">grid_view</span>
-      <span class="text-[10px] font-medium">Services</span>
-    </a>
-    <a routerLink="/about" routerLinkActive="text-primary" class="flex flex-col items-center justify-center w-full h-full space-y-1 text-slate-500 dark:text-slate-400 hover:text-midnight dark:hover:text-white transition-colors">
-      <span class="material-symbols-outlined">info</span>
-      <span class="text-[10px] font-medium">About</span>
-    </a>
-    <a routerLink="/contact" routerLinkActive="text-primary" class="flex flex-col items-center justify-center w-full h-full space-y-1 text-slate-500 dark:text-slate-400 hover:text-midnight dark:hover:text-white transition-colors">
-      <span class="material-symbols-outlined">mail</span>
-      <span class="text-[10px] font-medium">Contact</span>
-    </a>
+<nav class="bg-white dark:bg-midnight-card border-b border-gray-200 dark:border-gray-800">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="flex justify-between items-center h-16">
+      <a routerLink="/home" class="text-2xl font-bold text-midnight dark:text-white">Tolbid</a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a routerLink="/home" routerLinkActive="text-primary" [routerLinkActiveOptions]="{exact: true}" class="font-medium text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">Home</a>
+        <a routerLink="/services" routerLinkActive="text-primary" class="font-medium text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">Services</a>
+        <a routerLink="/about" routerLinkActive="text-primary" class="font-medium text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">About</a>
+        <a routerLink="/contact" routerLinkActive="text-primary" class="font-medium text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div class="md:hidden flex items-center">
+        <button (click)="toggleMobileMenu()" class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary focus:outline-none">
+          <span class="material-symbols-outlined">{{ isMobileMenuOpen ? 'close' : 'menu' }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div *ngIf="isMobileMenuOpen" class="md:hidden">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a routerLink="/home" routerLinkActive="text-primary" [routerLinkActiveOptions]="{exact: true}" class="block px-3 py-2 rounded-md text-base font-medium text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">Home</a>
+      <a routerLink="/services" routerLinkActive="text-primary" class="block px-3 py-2 rounded-md text-base font-medium text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">Services</a>
+      <a routerLink="/about" routerLinkActive="text-primary" class="block px-3 py-2 rounded-md text-base font-medium text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">About</a>
+      <a routerLink="/contact" routerLinkActive="text-primary" class="block px-3 py-2 rounded-md text-base font-medium text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
+    </div>
   </div>
 </nav>
