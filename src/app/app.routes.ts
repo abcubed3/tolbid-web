@@ -1,13 +1,10 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home';
-import { ServicesComponent } from './services/services';
-import { AboutComponent } from './about/about';
-import { ContactComponent } from './contact/contact';
+import { LandingComponent } from './landing/landing';
+import { RcsSolutionsComponent } from './rcs-solutions/rcs-solutions';
+
 
 export const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'services', component: ServicesComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'landing', component: LandingComponent },
+  { path: 'rcs-solutions', component: RcsSolutionsComponent },
+  { path: '', redirectTo: '/landing', pathMatch: 'full' },
 ];
